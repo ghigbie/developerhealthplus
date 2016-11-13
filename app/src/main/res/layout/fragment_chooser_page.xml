@@ -2,12 +2,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="layout.ChooserPage">
+    tools:context="layout.ChooserPage"
+    android:background="@color/backgroundColor">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/app_description"
+        android:layout_centerHorizontal="true"
+        android:text="@string/description"
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_margin="@dimen/title_margin" />
+
+    <Button
+        android:id="@+id/upper_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/upper_back"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"
+        android:background="@drawable/button_rounded"
+        android:padding="@dimen/title_margin"
+        android:onClick="onClickImprove"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/title_margin"/>
+
+        <Button
+            android:id="@+id/lower_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/lower_back"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:background="@drawable/button_rounded"
+            android:padding="@dimen/title_margin"
+            android:onClick="onClickImprove"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/title_margin"/>
+
+        <Button
+            android:id="@+id/both"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/lower_back"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:background="@drawable/button_rounded"
+            android:padding="@dimen/title_margin"
+            android:onClick="onClickImprove"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/title_margin"/>
+
+
+    </LinearLayout>
+
 
 </FrameLayout>

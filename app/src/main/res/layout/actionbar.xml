@@ -16,6 +16,8 @@
         android:layout_gravity="center"
         android:id="@+id/action_bar_title"
         android:text="@string/title"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textStyle="bold"
         android:textColor="#ffffff"
         android:textSize="24sp"/>
 
