@@ -8,10 +8,18 @@
     android:background="@color/backgroundColor">
 
 
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
     <TextView
         android:id="@+id/app_description"
-        android:layout_centerHorizontal="true"
         android:text="@string/description"
         android:textColor="@color/textColor"
         android:layout_width="wrap_content"
@@ -23,7 +31,6 @@
         android:id="@+id/app_disclaimer"
         android:layout_below="@id/app_description"
         android:textColor="@color/textColor"
-        android:layout_centerHorizontal="true"
         android:text="@string/disclaimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +41,7 @@
         android:id="@+id/go_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
         android:text="@string/improve_health"
         android:textAppearance="?android:textAppearanceLarge"
         android:textStyle="bold"
@@ -43,10 +50,7 @@
         android:padding="@dimen/title_margin"
         android:onClick="onClickImprove"/>
 
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        </LinearLayout>
 
     </FrameLayout>
 

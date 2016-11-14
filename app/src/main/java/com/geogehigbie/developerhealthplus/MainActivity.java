@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     private int time45Int = 45;
     private int time60Int = 60;
 
+    private String[] timeArray = {time30String, time45String, time60String};
+
     List<String> timeArrayList;
 
 
@@ -36,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        centerActionBar();
-        setSpinnerContent();
+        centerActionBar(); //this method has a soft error
+
     }
 
     public void centerActionBar(){
@@ -55,27 +57,30 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.fragment_container, new TimeChooser());
         fragmentTransaction.commit();
+        //fragmentTransaction.addToBackStack(null); //this causes crashing
 
     }
 
-    public void setSpinnerContent(){
-
-        //initializes the array list and adds times to it
-        timeArrayList = new ArrayList<String>();
-        timeArrayList.add(time30String);
-        timeArrayList.add(time45String);
-        timeArrayList.add(time60String);
-
-        //declares the spinner and uses the adapter to add itmes to it.
-        Spinner spinner = (Spinner) findViewById(R.id.spinner_time);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, timeArrayList);
-        spinner.setAdapter(adapter);
-    }
+//    public void setSpinnerContent(){
+//
+//        //initializes the array list and adds times to it
+//        timeArrayList = new ArrayList<String>();
+//        timeArrayList.add(time30String);
+//        timeArrayList.add(time45String);
+//        timeArrayList.add(time60String);
+//
+//        //declares the spinner and uses the adapter to add items to it.
+//        Spinner spinner1 = (Spinner) findViewById(R.id.spinner_time);
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, timeArrayList);
+////        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spinner1.setAdapter(adapter); //setting the adapter is causing crashing
+//    }
 
     public void onClickTimeSelectionSet(){
 
         fragmentTransaction.replace(R.id.fragment_container, new ChooserPage());
         fragmentTransaction.commit();
+        //fragmentTransaction.addToBackStack(null); //this method causes crashing
 
     }
 

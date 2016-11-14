@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/lower_back"
+            android:text="@string/both_back"
             android:textAppearance="?android:textAppearanceLarge"
             android:textStyle="bold"
             android:textColor="@color/textColor"

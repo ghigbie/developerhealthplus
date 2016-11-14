@@ -1,14 +1,15 @@
 <resources>
     <string name="app_name">Developer Health+</string>
     <string name="title">Developer Health</string>
-    <string name="description">The exercises in this app are designed in consultation with a sports medicine chiropractor, Dr. Steven Handler to help preserve developers\' physical posture.</string>
-    <string name="disclaimer">This is app is for entertainment purposes only and intended to be taken as medical advice.</string>
+    <string name="description">The exercises in this app are designed in consultation with Dr. Steven Handler, a sports medicine chiropractor. It\'s purpose is to help preserve developers\' physical posture while remaining optimally productive.</string>
+    <string name="disclaimer">Disclaimer: This is app is for entertainment purposes only and intended to be taken as medical advice.</string>
     <string name="time_description">This app will notify you when it\'s time for you to do a series of short exercises. Don\'t worry, we will guide you through the exercises.</string>
     <string name="time_selector">Please select your preferred time frequency below:</string>
     <string name="set_time">Set Time</string>
     <string name="improve_health">Improve My Health!</string>
     <string name="upper_back">Work on My Upper Back</string>
     <string name="lower_back">Work on My Lower Back</string>
+    <string name="both_back">Work on Upper &amp; Lower</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
