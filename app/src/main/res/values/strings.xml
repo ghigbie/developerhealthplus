@@ -5,6 +5,7 @@
     <string name="disclaimer">Disclaimer: This is app is for entertainment purposes only and intended to be taken as medical advice.</string>
     <string name="time_description">This app will notify you when it\'s time for you to do a series of short exercises. Don\'t worry, we will guide you through the exercises.</string>
     <string name="time_selector">Please select your preferred time frequency below:</string>
+    <string name="choose_exercise">Please select which exercise focus you would like to take for this session.</string>
     <string name="set_time">Set Time</string>
     <string name="improve_health">Improve My Health!</string>
     <string name="upper_back">Work on My Upper Back</string>

@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
     <TextView
-        android:id="@+id/app_description"
+        android:id="@+id/choose_exercise"
         android:layout_centerHorizontal="true"
         android:text="@string/description"
         android:textColor="@color/textColor"
@@ -32,7 +32,6 @@
         android:textColor="@color/textColor"
         android:background="@drawable/button_rounded"
         android:padding="@dimen/title_margin"
-        android:onClick="onClickImprove"
         android:layout_gravity="center_horizontal"
         android:layout_margin="@dimen/title_margin"/>
 
@@ -47,7 +46,6 @@
             android:textColor="@color/textColor"
             android:background="@drawable/button_rounded"
             android:padding="@dimen/title_margin"
-            android:onClick="onClickImprove"
             android:layout_gravity="center_horizontal"
             android:layout_margin="@dimen/title_margin"/>
 
@@ -62,7 +60,6 @@
             android:textColor="@color/textColor"
             android:background="@drawable/button_rounded"
             android:padding="@dimen/title_margin"
-            android:onClick="onClickImprove"
             android:layout_gravity="center_horizontal"
             android:layout_margin="@dimen/title_margin"/>
 

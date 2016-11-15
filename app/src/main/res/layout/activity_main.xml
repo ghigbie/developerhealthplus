@@ -38,7 +38,7 @@
         android:layout_margin="@dimen/title_margin" />
 
     <Button
-        android:id="@+id/go_button"
+        android:id="@+id/improve"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -47,8 +47,7 @@
         android:textStyle="bold"
         android:textColor="@color/textColor"
         android:background="@drawable/button_rounded"
-        android:padding="@dimen/title_margin"
-        android:onClick="onClickImprove"/>
+        android:padding="@dimen/title_margin"/>
 
         </LinearLayout>
 
