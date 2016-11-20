@@ -16,8 +16,8 @@ public class LowerBack extends Fragment {
     private Exercise quadHoldStretch;
     private Exercise poasStrech;
     private Exercise calfStrech;
-    private Exercise posturalPractice
-    private Exercise[] exercisesArray = {gluteAbContractions, quadHoldStretch, poasStrech, calfStrech, posturalPractice;
+    private Exercise posturalPractice;
+    private Exercise[] exercisesArray = {gluteAbContractions, quadHoldStretch, poasStrech, calfStrech, posturalPractice};
 
     private String gluteAbTitle = "Glute Ab Contraction";
     private String quadHoldTitle = "Quad Hold Stretch";
@@ -51,11 +51,13 @@ public class LowerBack extends Fragment {
 
     }
 
-    public void createUpperBackExercises(){
+    public void createUpperBackExercises() {
 
-        for(int a = 0; a < exercisesArray.length; a++){
+        for (int a = 0; a < exercisesArray.length; a++) {
             exercisesArray[a] = new Exercise(titleArray[a], descriptionArray[a], imageArray[a]);
         }
+
+    }
 
 
 
