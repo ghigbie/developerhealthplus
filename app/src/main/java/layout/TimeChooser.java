@@ -2,7 +2,6 @@ package layout;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
@@ -16,7 +15,7 @@ import com.geogehigbie.developerhealthplus.R;
 
 import java.util.ArrayList;
 
-import static android.R.string.no;
+gitimport android.support.v4.app.Fragment;
 
 
 public class TimeChooser extends Fragment {
@@ -35,6 +34,7 @@ public class TimeChooser extends Fragment {
     private int time60Int = 60;
 
     private int notificationTime;
+    private int notificationTimeSetterInt;
 
     private String[] timeArray = {pleaseChoose, time30String, time45String, time60String};
 
@@ -100,9 +100,6 @@ public class TimeChooser extends Fragment {
                 notificationTime = 0;
                 break;
         }
-
-        SharedPreferences highScoreSetter  = getSharedPreferences("highScoreFile", 0);
-        highScoreInt = highScoreSetter.getInt("highScore", highScoreInt);
 
         //this sets the time in the sharedPreferences
         SharedPreferences notificationTimeSetter = getSharedPreferences("timeNotificationFile", 0);
