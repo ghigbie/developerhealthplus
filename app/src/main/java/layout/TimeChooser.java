@@ -2,6 +2,7 @@ package layout;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
@@ -14,8 +15,6 @@ import android.widget.Spinner;
 import com.geogehigbie.developerhealthplus.R;
 
 import java.util.ArrayList;
-
-gitimport android.support.v4.app.Fragment;
 
 
 public class TimeChooser extends Fragment {
@@ -102,7 +101,7 @@ public class TimeChooser extends Fragment {
         }
 
         //this sets the time in the sharedPreferences
-        SharedPreferences notificationTimeSetter = getSharedPreferences("timeNotificationFile", 0);
+        SharedPreferences notificationTimeSetter = getActivity().getApplicationContext().getSharedPreferences("timeNotificationFile", 0);
         notificationTimeSetterInt = notificationTimeSetter.getInt("notificationTime", notificationTime);
 
         SharedPreferences.Editor editor = notificationTimeSetter.edit();
