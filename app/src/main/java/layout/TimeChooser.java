@@ -1,10 +1,12 @@
 package layout;
 
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,8 @@ import android.widget.Spinner;
 import com.geogehigbie.developerhealthplus.R;
 
 import java.util.ArrayList;
+
+import static android.content.Context.MODE_PRIVATE;
 
 
 public class TimeChooser extends Fragment {
@@ -107,6 +111,34 @@ public class TimeChooser extends Fragment {
         SharedPreferences.Editor editor = notificationTimeSetter.edit();
         editor.putInt("notificationTime", notificationTime);
         editor.commit();
+
+        //createDataBase();  //don't call this method until you have it squared away
+
+    }
+
+    //can add email as a preference
+
+    public void createDataBase(){
+
+        String TAG = "TimeChooserFragment";
+
+        SQLiteDatabase sqLiteDatabase = getActivity().getBaseContext().openOrCreateDatabase("sqlite-db", MODE_PRIVATE, null);
+        String sqlCommand = "DROP TABLE IF EXISTS contacts;"; //this variable will be replaced as it changes
+        Log.d(TAG, "onCreate: " + sqlCommand);
+        sqLiteDatabase.execSQL(sqlCommand);
+
+        sqlCommand = "CREATE TABLE IF NOT EXISTS contacts(time INTEGER, activationTime INTEGER, email TEXT);";
+        Log.d(TAG, "createDataBase: " + sqlCommand);
+        sqLiteDatabase.execSQL(sqlCommand);
+
+        sqlCommand = "INSERT INTO contacts VALUES('tim', 23234, tim@email.com');";
+        Log.d(TAG, "createDataBase: " + sqlCommand);
+        sqLiteDatabase.execSQL(sqlCommand);
+
+        sqlCommand = "INSERT INTO contacts VALUES('fred', 12qw34q, fred@email.com);";
+        Log.d(TAG, "cretedDataBase: " + sqlCommand);
+        sqLiteDatabase.execSQL(sqlCommand);
+
 
     }
 
