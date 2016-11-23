@@ -116,7 +116,7 @@ public class TimeChooser extends Fragment {
 
     }
 
-    //can add email as a preference
+    //can add email as a preference think about this
 
     public void createDataBase(){
 
