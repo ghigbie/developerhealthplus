@@ -114,6 +114,8 @@ public class TimeChooser extends Fragment {
 
         //createDataBase();  //don't call this method until you have it squared away
 
+        //how often do you want to be notified?
+
     }
 
     //can add email as a preference think about this
