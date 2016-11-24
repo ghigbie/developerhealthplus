@@ -10,6 +10,9 @@ import android.widget.ImageView;
 import com.geogehigbie.developerhealthplus.Exercise;
 import com.geogehigbie.developerhealthplus.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class UpperBack extends Fragment {
 
@@ -19,6 +22,8 @@ public class UpperBack extends Fragment {
     public static Exercise neckStretchHold;
     public static Exercise armsBehindBack;
     public static Exercise[] exercisesArrayUpper = {chinTuck, shoulderShrug, doorwayStretch, neckStretchHold, armsBehindBack};
+
+    public static List<Exercise> exerciseArrayListUpper = new ArrayList<Exercise>();
 
     private String chinTitle = "Chin Tucks";
     private String shoulderTitle = "Shoulder Shrug Holds Push Back";
@@ -57,6 +62,7 @@ public class UpperBack extends Fragment {
             imageArray[a] = new ImageView(getContext());
             imageArray[a].setImageResource(R.mipmap.ic_launcher);
             exercisesArrayUpper[a] = new Exercise(titleArray[a], descriptionArray[a], imageArray[a]);
+            exerciseArrayListUpper.add(exercisesArrayUpper[a]);
         }
     }
 

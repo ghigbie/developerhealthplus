@@ -9,13 +9,17 @@ import android.view.ViewGroup;
 import com.geogehigbie.developerhealthplus.Exercise;
 import com.geogehigbie.developerhealthplus.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static layout.LowerBack.exercisesArrayLower;
 import static layout.UpperBack.exercisesArrayUpper;
 
 
 public class BothUpperLower extends Fragment {
 
-    public Exercise[] exercisesArrayBoth = new Exercise[exercisesArrayUpper.length + exercisesArrayLower.length];
+    public static Exercise[] exercisesArrayBoth = new Exercise[exercisesArrayUpper.length + exercisesArrayLower.length];
+    public static List<Exercise> exercisesArrayListBoth = new ArrayList<Exercise>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,10 +34,12 @@ public class BothUpperLower extends Fragment {
     public void createBothUpperLowerExercises() {
         for (int a = 0; a < exercisesArrayUpper.length; a++){
             exercisesArrayBoth[a] = exercisesArrayUpper[a];
+            exercisesArrayListBoth.add(exercisesArrayBoth[a]);
         }
 
         for (int b = (exercisesArrayUpper.length -1); b < exercisesArrayLower.length; b++){
             exercisesArrayBoth[b] = exercisesArrayBoth[b];
+            exercisesArrayListBoth.add(exercisesArrayBoth[b]);
         }
     }
 

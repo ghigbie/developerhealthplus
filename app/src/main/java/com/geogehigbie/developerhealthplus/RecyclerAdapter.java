@@ -1,19 +1,21 @@
-package layout;
+package com.geogehigbie.developerhealthplus;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.geogehigbie.developerhealthplus.Exercise;
-import com.geogehigbie.developerhealthplus.R;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class LowerBack extends Fragment {
+/**
+ * Created by georgehigbie on 11/24/16.
+ */
+
+public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
+
 
     public static Exercise gluteAbContractions;
     public static Exercise quadHoldStretch;
@@ -46,27 +48,20 @@ public class LowerBack extends Fragment {
     private ImageView[] imageArray = {gluteAbImage, quadHoldImage, psoasStretchImage, calfStretchImage, posturalImage};
 
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        createUpperBackExercises();
-        return inflater.inflate(R.layout.fragment_lower_back, container, false);
+    class ViewHolder extends RecyclerView.ViewHolder{
+
+        public ImageView itemImage;
+        public TextView itemTitle;
+        public TextView itemDescription;
 
 
-    }
+        public ViewHolder(View itemView){
+            super(itemView);
 
-    public void createUpperBackExercises() {
+            itemImage = (ImageView) itemView.findViewById(R.id.card_image);
+            itemTitle = (TextView) itemView.findViewById(R.id.card_title);
+            itemDescription = (TextView) itemView.findViewById(R.id.card_description);
 
-        for (int a = 0; a < exercisesArrayLower.length; a++) {
-            imageArray[a] = new ImageView(getContext());
-            imageArray[a].setImageResource(R.mipmap.ic_launcher);
-            exercisesArrayLower[a] = new Exercise(titleArray[a], descriptionArray[a], imageArray[a]);
-            exerciseArrayListLower.add(exercisesArrayLower[a]);
         }
-
     }
-
-
-
 }
