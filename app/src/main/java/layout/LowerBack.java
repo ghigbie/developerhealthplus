@@ -50,13 +50,13 @@ public class LowerBack extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        createUpperBackExercises();
+        createLowerBackExercises();
         return inflater.inflate(R.layout.fragment_lower_back, container, false);
 
 
     }
 
-    public void createUpperBackExercises() {
+    public void createLowerBackExercises() {
 
         for (int a = 0; a < exercisesArrayLower.length; a++) {
             imageArray[a] = new ImageView(getContext());

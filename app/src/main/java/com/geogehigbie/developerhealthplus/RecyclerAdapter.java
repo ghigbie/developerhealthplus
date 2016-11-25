@@ -1,11 +1,11 @@
 package com.geogehigbie.developerhealthplus;
 
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +46,42 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private ImageView calfStretchImage;
     private ImageView posturalImage;
     private ImageView[] imageArray = {gluteAbImage, quadHoldImage, psoasStretchImage, calfStretchImage, posturalImage};
+
+    public void createLowerBackExercises() {
+
+        for (int a = 0; a < exercisesArrayLower.length; a++) {
+            imageArray[a].setImageResource(R.mipmap.ic_launcher);
+            exercisesArrayLower[a] = new Exercise(titleArray[a], descriptionArray[a], imageArray[a]);
+            exerciseArrayListLower.add(exercisesArrayLower[a]);
+        }
+
+    }
+
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+
+        View v  = LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.card_layout, viewGroup, false);
+
+        ViewHolder viewHolder = new ViewHolder(v);
+
+
+        return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+
+        viewHolder.itemTitle.setText(exerciseArrayListLower.get(position).getTitle());
+        viewHolder.itemDescription.setText(exerciseArrayListLower.get(position).getDescription());
+      //  viewHolder.itemImage.setImageResource(exerciseArrayListLower.get(position).getExercsieImage());
+    }
+
+
+    @Override
+    public int getItemCount() {
+        return exerciseArrayListLower.size();
+    }
 
 
     class ViewHolder extends RecyclerView.ViewHolder{
