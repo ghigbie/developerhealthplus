@@ -17,7 +17,7 @@ import java.util.List;
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
 
-    //it makes more sense to use a
+    //it makes more sense to use a list view
     public static Exercise gluteAbContractions;
     public static Exercise quadHoldStretch;
     public static Exercise poasStrech;
