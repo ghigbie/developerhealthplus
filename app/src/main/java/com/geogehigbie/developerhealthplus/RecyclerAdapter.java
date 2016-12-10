@@ -17,6 +17,7 @@ import java.util.List;
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
 
+    //it makes more sense to use a
     public static Exercise gluteAbContractions;
     public static Exercise quadHoldStretch;
     public static Exercise poasStrech;
