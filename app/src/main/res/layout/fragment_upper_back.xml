@@ -5,10 +5,15 @@
     tools:context="layout.UpperBack"
     android:background="@color/backgroundColor">
 
-    <android.support.v7.widget.RecyclerView
+    <!--<android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view_upper_back"
         android:scrollbars="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"/>-->
+
+    <ListView
+        android:id="@+id/list_view_upper"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"></ListView>
 
 </FrameLayout>
