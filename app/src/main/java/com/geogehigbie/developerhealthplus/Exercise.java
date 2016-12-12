@@ -10,13 +10,13 @@ public class Exercise {
 
     private String Title;
     private String Description;
-    private ImageView ExercsieImage;
+    private ImageView ExerciseImage;
 
-    public Exercise(String title, String description, ImageView exercsieImage){
+    public Exercise(String title, String description, ImageView exerciseImage){
 
         Title = title;
         Description = description;
-        ExercsieImage = exercsieImage;
+        ExerciseImage = exerciseImage;
 
     }
 
