@@ -6,11 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.geogehigbie.developerhealthplus.CustomAdapter;
+import com.geogehigbie.developerhealthplus.CustomListAdapter;
 import com.geogehigbie.developerhealthplus.Exercise;
 import com.geogehigbie.developerhealthplus.R;
 
@@ -66,10 +65,10 @@ public class LowerBack extends Fragment {
         createLowerBackExercises();
 
         listView = (ListView) view.findViewById(R.id.list_view_lower);
-        ArrayAdapter<Exercise> arrayAdapter = new ArrayAdapter<Exercise>(
-                getActivity().getApplicationContext(), R.layout.row_layout_for_use);
+//        ArrayAdapter<Exercise> arrayAdapter = new ArrayAdapter<Exercise>(
+//                getActivity().getApplicationContext(), R.layout.row_layout_for_use);
 
-        listView.setAdapter(new CustomAdapter(context, titleArray, imageIntsArray));
+        listView.setAdapter(new CustomListAdapter(context, titleArray, imageIntsArray));
 
         return inflater.inflate(R.layout.fragment_lower_back, container, false);
 
