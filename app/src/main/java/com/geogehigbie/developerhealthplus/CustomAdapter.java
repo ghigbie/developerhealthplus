@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class CustomAdapter extends BaseAdapter{
@@ -15,6 +14,8 @@ public class CustomAdapter extends BaseAdapter{
     Context context;
     int [] imageId;
     private static LayoutInflater inflater=null;
+
+
     public CustomAdapter(MainActivity mainActivity, String[] prgmNameList, int[] prgmImages) {
         // TODO Auto-generated constructor stub
         result=prgmNameList;
@@ -55,16 +56,16 @@ public class CustomAdapter extends BaseAdapter{
         holder.img=(ImageView) rowView.findViewById(R.id.video_icon);
         holder.textView.setText(result[position]);
         holder.img.setImageResource(imageId[position]);
-        rowView.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Toast.makeText(context, "You Clicked "+result[position], Toast.LENGTH_LONG).show();
-            }
-        });
+//        rowView.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // TODO Auto-generated method stub
+//                Toast.makeText(context, "You Clicked "+result[position], Toast.LENGTH_LONG).show();
+//            }
+//        });
 
         return rowView;
     }
 
 }
-}
+

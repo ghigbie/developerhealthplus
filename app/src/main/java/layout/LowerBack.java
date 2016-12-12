@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -47,6 +48,8 @@ public class LowerBack extends Fragment {
     private ImageView posturalImage;
     private ImageView[] imageArray = {gluteAbImage, quadHoldImage, psoasStretchImage, calfStretchImage, posturalImage};
 
+    private int [] imageIntsArray = {R.drawable.video_icon_second, R.drawable.video_icon_second, R.drawable.video_icon_second, R.drawable.video_icon_second};
+
 
     private View view;
     ListView listView;
@@ -59,10 +62,16 @@ public class LowerBack extends Fragment {
         view =  inflater.inflate(R.layout.fragment_lower_back, container, false);
         context = getActivity().getApplicationContext();
         listView = (ListView) view.findViewById(R.id.list_view_lower);
+        ArrayAdapter<Exercise> arrayAdapter = new ArrayAdapter<Exercise>(
+                getActivity().getApplicationContext(), R.layout.row_layout_for_use);
+
+        listView.setAdapter(arrayAdapter);
+
 
         // Inflate the layout for this fragment
         createLowerBackExercises();
         return inflater.inflate(R.layout.fragment_lower_back, container, false);
+
 
 
     }
