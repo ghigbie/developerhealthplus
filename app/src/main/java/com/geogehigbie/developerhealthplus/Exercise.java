@@ -28,12 +28,12 @@ public class Exercise {
         Description = description;
     }
 
-    public ImageView getExercsieImage() {
-        return ExercsieImage;
+    public ImageView getExerciseImage() {
+        return ExerciseImage;
     }
 
-    public void setExercsieImage(ImageView exercsieImage) {
-        ExercsieImage = exercsieImage;
+    public void setExercsieImage(ImageView exerciseImage) {
+        ExerciseImage = exerciseImage;
     }
 
     public String getTitle() {
