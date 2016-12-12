@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.geogehigbie.developerhealthplus.CustomAdapter;
 import com.geogehigbie.developerhealthplus.Exercise;
 import com.geogehigbie.developerhealthplus.R;
 
@@ -68,7 +69,7 @@ public class LowerBack extends Fragment {
         ArrayAdapter<Exercise> arrayAdapter = new ArrayAdapter<Exercise>(
                 getActivity().getApplicationContext(), R.layout.row_layout_for_use);
 
-        listView.setAdapter(arrayAdapter);
+        listView.setAdapter(new CustomAdapter(context, titleArray, imageIntsArray));
 
         return inflater.inflate(R.layout.fragment_lower_back, container, false);
 

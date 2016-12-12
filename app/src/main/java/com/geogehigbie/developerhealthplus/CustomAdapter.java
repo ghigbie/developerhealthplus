@@ -16,10 +16,10 @@ public class CustomAdapter extends BaseAdapter{
     private static LayoutInflater inflater=null;
 
 
-    public CustomAdapter(MainActivity mainActivity, String[] prgmNameList, int[] prgmImages) {
+    public CustomAdapter(Context context, String[] prgmNameList, int[] prgmImages) {
         // TODO Auto-generated constructor stub
         result=prgmNameList;
-        context=mainActivity;
+        context=context;
         imageId=prgmImages;
         inflater = ( LayoutInflater )context.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
