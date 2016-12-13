@@ -1,8 +1,10 @@
 package layout;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,9 @@ import com.geogehigbie.developerhealthplus.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.R.attr.selectable;
+import static android.R.attr.selectableItemBackground;
 
 public class LowerBack extends Fragment {
 
@@ -61,6 +66,13 @@ public class LowerBack extends Fragment {
         view =  inflater.inflate(R.layout.fragment_lower_back, container, false);
         context = getActivity().getApplicationContext();
 
+        CardView card = new CardView(context);
+        card.setCardBackgroundColor(Color.parseColor("#E6E6E6"));
+        card.setMaxCardElevation((float) 0.0);
+        card.setRadius((float) 5.0);
+        card.setClickable(true);
+        card.setForeground(selectableItemBackground);
+
         // Inflate the layout for this fragment
         createLowerBackExercises();
 
@@ -84,6 +96,11 @@ public class LowerBack extends Fragment {
             exercisesArrayLower[a] = new Exercise(titleArray[a], descriptionArray[a], imageArray[a]);
             exerciseArrayListLower.add(exercisesArrayLower[a]);
         }
+
+    }
+
+    public void createCardViews(){
+
 
     }
 
