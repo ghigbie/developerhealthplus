@@ -14,13 +14,13 @@ import android.widget.TextView;
  * Created by georgehigbie on 12/12/16.
  */
 
-public class CustomListAdapter extends ArrayAdapter<String> {
+public class ExerciseListAdapter extends ArrayAdapter<String> {
 
     private final Context context;
     private final String[] values;
     private final int[] icons;
 
-    public CustomListAdapter(Context context, String[] values, int[] icons) {
+    public ExerciseListAdapter(Context context, String[] values, int[] icons) {
         super(context, R.layout.row_layout, values);
         this.context = context;
         this.values = values;
