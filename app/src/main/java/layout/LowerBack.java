@@ -87,7 +87,7 @@ public class LowerBack extends Fragment {
 
 
     }
-
+    //creates the lower back exercises
     public void createLowerBackExercises() {
 
         for (int a = 0; a < exercisesArrayLower.length; a++) {
