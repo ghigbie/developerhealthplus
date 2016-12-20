@@ -5,7 +5,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 import com.geogehigbie.developerhealthplus.Exercise;
 import com.geogehigbie.developerhealthplus.R;
@@ -46,13 +48,24 @@ public class UpperBack extends Fragment {
     private ImageView armsBehindImage;
     private ImageView[] imageArray = {chinImage, shoulderImage, doorStrechImage, neckStrechImage, armsBehindImage};
 
+    private View view;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         createUpperBackExercises();
-        return inflater.inflate(R.layout.fragment_upper_back, container, false);
+        view = inflater.inflate(R.layout.fragment_upper_back, container, false);
+
+        ListView listView = (ListView)  view.findViewById(R.id.list_view_upper);
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, titleArray);
+
+        listView.setAdapter(arrayAdapter);
+
+        return view;
     }
 
 

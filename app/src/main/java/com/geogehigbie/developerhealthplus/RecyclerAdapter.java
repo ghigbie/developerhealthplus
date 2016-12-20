@@ -95,9 +95,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         public ViewHolder(View itemView){
             super(itemView);
 
-            itemImage = (ImageView) itemView.findViewById(R.id.card_image);
-            itemTitle = (TextView) itemView.findViewById(R.id.card_title);
-            itemDescription = (TextView) itemView.findViewById(R.id.card_description);
+//            itemImage = (ImageView) itemView.findViewById(R.id.card_image);
+//            itemTitle = (TextView) itemView.findViewById(R.id.card_title);
+//            itemDescription = (TextView) itemView.findViewById(R.id.card_description);
 
         }
     }

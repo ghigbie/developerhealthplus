@@ -1,25 +1,20 @@
 package layout;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.geogehigbie.developerhealthplus.Exercise;
-import com.geogehigbie.developerhealthplus.ExerciseListAdapter;
 import com.geogehigbie.developerhealthplus.R;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.R.attr.selectable;
-import static android.R.attr.selectableItemBackground;
 
 public class LowerBack extends Fragment {
 
@@ -66,21 +61,23 @@ public class LowerBack extends Fragment {
         view =  inflater.inflate(R.layout.fragment_lower_back, container, false);
         context = getActivity().getApplicationContext();
 
-        CardView card = new CardView(context);
-        card.setCardBackgroundColor(Color.parseColor("#E6E6E6"));
-        card.setMaxCardElevation((float) 0.0);
-        card.setRadius((float) 5.0);
-        card.setClickable(true);
-        card.setForeground(selectableItemBackground);
+
+
+//        CardView card = new CardView(context);
+//        card.setCardBackgroundColor(Color.parseColor("#E6E6E6"));
+//        card.setMaxCardElevation((float) 0.0);
+//        card.setRadius((float) 5.0);
+//        card.setClickable(true);
+        //card.setForeground(selectableItemBackground);
 
         // Inflate the layout for this fragment
         createLowerBackExercises();
 
         listView = (ListView) view.findViewById(R.id.list_view_lower);
-//        ArrayAdapter<Exercise> arrayAdapter = new ArrayAdapter<Exercise>(
-//                getActivity().getApplicationContext(), R.layout.row_layout_for_use);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, titleArray);
 
-        listView.setAdapter(new ExerciseListAdapter(context, titleArray, imageIntsArray));
+        listView.setAdapter(arrayAdapter);
 
         return view;
 
