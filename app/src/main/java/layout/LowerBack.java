@@ -101,6 +101,9 @@ public class LowerBack extends Fragment {
 
     }
 
+    public String[] getTitleArray() {
+        return titleArray;
+    }
 
 
 }

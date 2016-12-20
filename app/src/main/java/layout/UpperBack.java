@@ -58,7 +58,7 @@ public class UpperBack extends Fragment {
         createUpperBackExercises();
         view = inflater.inflate(R.layout.fragment_upper_back, container, false);
 
-        ListView listView = (ListView)  view.findViewById(R.id.list_view_upper);
+        ListView listView = (ListView) view.findViewById(R.id.list_view_upper);
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, titleArray);
@@ -79,99 +79,8 @@ public class UpperBack extends Fragment {
         }
     }
 
-    public Exercise getArmsBehindBack() {
-        return armsBehindBack;
-    }
-
-    public String getArmsBehindDescription() {
-        return armsBehindDescription;
-    }
-
-    public ImageView getArmsBehindImage() {
-        return armsBehindImage;
-    }
-
-    public String getArmsBehindTitle() {
-        return armsBehindTitle;
-    }
-
-    public String getChinDescription() {
-        return chinDescription;
-    }
-
-    public ImageView getChinImage() {
-        return chinImage;
-    }
-
-    public String getChinTitle() {
-        return chinTitle;
-    }
-
-    public Exercise getChinTuck() {
-        return chinTuck;
-    }
-
-    public String[] getDescriptionArray() {
-        return descriptionArray;
-    }
-
-    public ImageView getDoorStrechImage() {
-        return doorStrechImage;
-    }
-
-    public String getDoorStrecthTitle() {
-        return doorStrecthTitle;
-    }
-
-    public String getDoorStretchDescription() {
-        return doorStretchDescription;
-    }
-
-    public Exercise getDoorwayStretch() {
-        return doorwayStretch;
-    }
-
-    public Exercise[] getExercisesArrayUpper() {
-        return exercisesArrayUpper;
-    }
-
-    public ImageView[] getImageArray() {
-        return imageArray;
-    }
-
-    public ImageView getNeckStrechImage() {
-        return neckStrechImage;
-    }
-
-    public String getNeckStretchDescription() {
-        return neckStretchDescription;
-    }
-
-    public Exercise getNeckStretchHold() {
-        return neckStretchHold;
-    }
-
-    public String getNeckStretchTitle() {
-        return neckStretchTitle;
-    }
-
-    public String getShoulderDescription() {
-        return shoulderDescription;
-    }
-
-    public ImageView getShoulderImage() {
-        return shoulderImage;
-    }
-
-    public Exercise getShoulderShrug() {
-        return shoulderShrug;
-    }
-
-    public String getShoulderTitle() {
-        return shoulderTitle;
-    }
-
     public String[] getTitleArray() {
         return titleArray;
     }
 }
+

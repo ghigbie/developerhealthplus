@@ -21,14 +21,19 @@ public class BothUpperLower extends Fragment {
     public static Exercise[] exercisesArrayBoth = new Exercise[exercisesArrayUpper.length + exercisesArrayLower.length];
     public static List<Exercise> exercisesArrayListBoth = new ArrayList<Exercise>();
 
+    public View view;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        view = inflater.inflate(R.layout.fragment_both_upper_lower, container, false);
+
+
 
         createBothUpperLowerExercises();
 
-        return inflater.inflate(R.layout.fragment_both_upper_lower, container, false);
+        return view;
     }
 
     public void createBothUpperLowerExercises() {
