@@ -1,6 +1,7 @@
 package com.geogehigbie.developerhealthplus;
 
 import android.app.ActionBar;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void createExercises(){
 
+        SQLiteDatabase sqLiteDatabase = getBaseContext().openOrCreateDatabase("exercises_all", );
 
     }
 

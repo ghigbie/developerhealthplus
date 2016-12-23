@@ -21,6 +21,8 @@ public class BothUpperLower extends Fragment {
     public static Exercise[] exercisesArrayBoth = new Exercise[exercisesArrayUpper.length + exercisesArrayLower.length];
     public static List<Exercise> exercisesArrayListBoth = new ArrayList<Exercise>();
 
+    public static String[] titleArray = new String [LowerBack.titleArray.length]
+
     public View view;
 
     @Override

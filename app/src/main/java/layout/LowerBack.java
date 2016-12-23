@@ -27,12 +27,12 @@ public class LowerBack extends Fragment {
 
     public static List<Exercise> exerciseArrayListLower = new ArrayList<Exercise>();
 
-    private String gluteAbTitle = "Glute Ab Contraction";
-    private String quadHoldTitle = "Quad Hold Stretch";
-    private String psoasStretchTitle = "PsoasStretch";
-    private String calfStretchTitle = "Calf Stretch Holds";
-    private String posturalTitle = "Postural Practice (Awareness)";
-    private String[] titleArray = {gluteAbTitle, quadHoldTitle, psoasStretchTitle, calfStretchTitle, posturalTitle};
+    private static String gluteAbTitle = "Glute Ab Contraction";
+    private static String quadHoldTitle = "Quad Hold Stretch";
+    private static String psoasStretchTitle = "PsoasStretch";
+    private static String calfStretchTitle = "Calf Stretch Holds";
+    private static String posturalTitle = "Postural Practice (Awareness)";
+    public static String[] titleArray = {gluteAbTitle, quadHoldTitle, psoasStretchTitle, calfStretchTitle, posturalTitle};
 
     private String gluteAbDescription = "Squeeze your abs and your buttocks and hold for 20 seconds";
     private String quadHoldDescription = "Stand up, use a desk or wall to maintain your balance, grab your foot, and pull your foot toward your buttocks.";

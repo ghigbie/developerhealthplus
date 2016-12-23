@@ -32,7 +32,7 @@ public class UpperBack extends Fragment {
     private String doorStrecthTitle = "Doorway Stretch";
     private String neckStretchTitle = "Neck Stretch Holds";
     private String armsBehindTitle = "Arms Behind the Back Hold";
-    private String[] titleArray = {chinTitle, shoulderTitle, doorStrecthTitle, neckStretchTitle, armsBehindTitle};
+    public static String[] titleArray = {chinTitle, shoulderTitle, doorStrecthTitle, neckStretchTitle, armsBehindTitle};
 
     private String chinDescription = "Raise the back of your head as if you were sliding it up a wall.";
     private String shoulderDescription = "Raise your shoulders up toward your ears,then move them back, and then move them down.";
