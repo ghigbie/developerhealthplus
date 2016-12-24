@@ -18,6 +18,7 @@ public class Exercise {
         Description = description;
         ExerciseImage = exerciseImage;
 
+
     }
 
     public String getDescription() {

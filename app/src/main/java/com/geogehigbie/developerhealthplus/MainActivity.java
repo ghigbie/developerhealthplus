@@ -8,6 +8,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import layout.LowerBack;
 import layout.TimeChooser;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         centerActionBar(); //this method has a soft error
 
         setOnClickMethod(); //sets the button's onClick Listener
-
     }
+
 
     public void centerActionBar(){
 
@@ -55,7 +57,21 @@ public class MainActivity extends AppCompatActivity {
 
     public void createExercises(){
 
-        SQLiteDatabase sqLiteDatabase = getBaseContext().openOrCreateDatabase("exercises_all", );
+    }
+
+
+    public void createDatabase(){
+        String sqlCommand; //this String will be overwritten mutiple times and represents all of the commands used for creating the table
+
+        SQLiteDatabase sqLiteDatabase = getBaseContext().openOrCreateDatabase("exercises_all", MODE_PRIVATE, null);
+        sqlCommand = "DROP TABLE IF EXISTS exercises_all";
+        sqLiteDatabase.execSQL(sqlCommand);
+
+        sqlCommand = "CREATE TABLE IF NOT EXISTS exercises_all(id INTEGER PRIMARY KEY, name TEXT, type TEXT, " +
+                "instructions TEXT, video_link TEXT, image_link TEXT)";
+        sqLiteDatabase.execSQL(sqlCommand);
+
+        sqlCommand = "INSERT INTO TABLE exercises all(1," + LowerBack.lo
 
     }
 
