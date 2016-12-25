@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import layout.LowerBack;
 import layout.TimeChooser;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         centerActionBar(); //this method has a soft error
 
         setOnClickMethod(); //sets the button's onClick Listener
+
+        createExercises();
     }
 
 
@@ -56,6 +59,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void createExercises(){
+        String gluteAbTitle = "Glute Ab Contraction";
+        String quadHoldTitle = "Quad Hold Stretch";
+        String psoasStretchTitle = "PsoasStretch";
+        String calfStretchTitle = "Calf Stretch Holds";
+        String posturalTitle = "Postural Practice (Awareness)";
+        String[] titleArray = {gluteAbTitle, quadHoldTitle, psoasStretchTitle, calfStretchTitle, posturalTitle};
+
+        String gluteAbDescription = "Squeeze your abs and your buttocks and hold for 20 seconds";
+        String quadHoldDescription = "Stand up, use a desk or wall to maintain your balance, grab your foot, and pull your foot toward your buttocks.";
+        String psoasStretchDescription = "Stand with a wide stance and stretch the front of your legs.";
+        String calfStretchDescription = "Stand close to a wall. Push the wall with both hands. ";
+        String posturalDescription = "Arms Behind the Back Hold";
+        String[] descriptionArray = {gluteAbDescription, quadHoldDescription, psoasStretchDescription, calfStretchDescription, posturalDescription};
+
+        String gluteAbImageURL = "abcd";
+        String quadHoldImageURL = "abcd";
+        String psoasStretchImageURL = "abcd";
+        String calfStretchImageURL = "abcd";
+        String posturalImageURL= "abcd";
+        String [] imageURLArray = {gluteAbImageURL, quadHoldImageURL, psoasStretchImageURL, calfStretchImageURL, posturalImageURL};
+
+        int [] imageIntsArray = {R.drawable.video_icon_second, R.drawable.video_icon_second, R.drawable.video_icon_second, R.drawable.video_icon_second};
+
+
 
     }
 
@@ -71,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 "instructions TEXT, video_link TEXT, image_link TEXT)";
         sqLiteDatabase.execSQL(sqlCommand);
 
-        sqlCommand = "INSERT INTO TABLE exercises all(1," + LowerBack.lo
+        sqlCommand = "INSERT INTO TABLE exercises all(1,";
 
     }
 
