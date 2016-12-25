@@ -49,6 +49,13 @@ public class LowerBack extends Fragment {
     private String posturalImageURL= "abcd";
     private String [] imageURLArray = {gluteAbImageURL, quadHoldImageURL, psoasStretchImageURL, calfStretchImageURL, posturalImageURL};
 
+    private String gluteAbVideoURL = "abcd";
+    private String quadHoldVideoURL = "abcd";
+    private String psoasStretchVideoURL = "abcd";
+    private String calfStretchVideoURL = "abcd";
+    private String posturalVideoURL= "abcd";
+    private String [] videoURLArray = {gluteAbImageURL, quadHoldImageURL, psoasStretchImageURL, calfStretchImageURL, posturalImageURL};
+
     private ImageView gluteAbImage;
     private ImageView quadHoldImage;
     private ImageView psoasStretchImage;
@@ -97,9 +104,9 @@ public class LowerBack extends Fragment {
 
         SQLiteDatabase sqliteDatabase = getActivity().getBaseContext().openOrCreateDatabase("exercises_all", Context.MODE_PRIVATE, null);
 
-        sqlCommand = "INSERT INTO exercises_all (title, description, imageURL, videoURL ";
+        sqlCommand = "INSERT INTO exercises_all (title, description, imageURL, videoURL) VALUES(";
         for(int a = 0; a < titleArray.length; a++){
-            sqliteDatabase.execSQL(sqlCommand + titleArray[a]);
+            sqliteDatabase.execSQL(sqlCommand + titleArray[a] + descriptionArray[a] + imageURLArray[a]+ videoURLArray + ");");
         }
 
     }
@@ -111,7 +118,7 @@ public class LowerBack extends Fragment {
         for (int a = 0; a < exercisesArrayLower.length; a++) {
             imageArray[a] = new ImageView(getContext());
             imageArray[a].setImageResource(R.mipmap.ic_launcher);
-            exercisesArrayLower[a] = new Exercise(titleArray[a], descriptionArray[a], imageArray[a]);
+            exercisesArrayLower[a] = new Exercise(titleArray[a], descriptionArray[a], imageArray[a], );
             exerciseArrayListLower.add(exercisesArrayLower[a]);
         }
 

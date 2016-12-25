@@ -41,6 +41,20 @@ public class UpperBack extends Fragment {
     private String armsBehindDescription = "Clasp your hands behind your back and hold.";
     private String[] descriptionArray = {chinDescription, shoulderDescription, doorStretchDescription, neckStretchDescription, armsBehindDescription};
 
+    private String chinImageURL = "abcd";
+    private String shoulderImageURL = "abcd";
+    private String doorStrecthImageURL = "abcd";
+    private String neckStretchImageURL = "abcd";
+    private String armsBehindImageURL = "abcd";
+    private String[] imageURLArray = {chinImageURL, shoulderImageURL, doorStrecthImageURL, neckStretchImageURL, armsBehindImageURL};
+
+    private String chinVideoURL = "abcd";
+    private String shoulderVideoURL = "abcd";
+    private String doorStrecthVideoURL = "abcd";
+    private String neckStretchVideoURL = "abcd";
+    private String armsBehindVideoURL = "abcd";
+    private String[] videoURLArray = {chinVideoURL, shoulderVideoURL, doorStrecthVideoURL, neckStretchVideoURL, armsBehindVideoURL};
+
     private ImageView chinImage;
     private ImageView shoulderImage;
     private ImageView doorStrechImage;

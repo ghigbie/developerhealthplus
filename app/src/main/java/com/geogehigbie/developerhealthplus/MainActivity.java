@@ -82,6 +82,13 @@ public class MainActivity extends AppCompatActivity {
         String posturalImageURL= "abcd";
         String [] imageURLArray = {gluteAbImageURL, quadHoldImageURL, psoasStretchImageURL, calfStretchImageURL, posturalImageURL};
 
+        String gluteAbVideoURL = "abcd";
+        String quadHoldVideoURL = "abcd";
+        String psoasStretchVideoURL = "abcd";
+        String calfStretchVideoURL = "abcd";
+        String posturalVideoURL= "abcd";
+        String [] videoURLArray = {gluteAbImageURL, quadHoldImageURL, psoasStretchImageURL, calfStretchImageURL, posturalImageURL};
+
         int [] imageIntsArray = {R.drawable.video_icon_second, R.drawable.video_icon_second, R.drawable.video_icon_second, R.drawable.video_icon_second};
 
 
