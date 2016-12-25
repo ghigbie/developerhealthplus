@@ -105,7 +105,7 @@ public class UpperBack extends Fragment {
         for (int a = 0; a < exercisesArrayUpper.length; a++) {
             imageArray[a] = new ImageView(getContext());
             imageArray[a].setImageResource(R.mipmap.ic_launcher);
-            exercisesArrayUpper[a] = new Exercise(titleArray[a], descriptionArray[a], imageArray[a]);
+            //exercisesArrayUpper[a] = new Exercise(titleArray[a], descriptionArray[a], imageArray[a]);
             exerciseArrayListUpper.add(exercisesArrayUpper[a]);
         }
     }

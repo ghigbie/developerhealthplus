@@ -21,7 +21,7 @@ public class BothUpperLower extends Fragment {
     public static Exercise[] exercisesArrayBoth = new Exercise[exercisesArrayUpper.length + exercisesArrayLower.length];
     public static List<Exercise> exercisesArrayListBoth = new ArrayList<Exercise>();
 
-    public static String[] titleArray = new String [LowerBack.titleArray.length]
+   // public static String[] titleArray = new String [LowerBack.titleArray.length];
 
     public View view;
 
@@ -31,6 +31,8 @@ public class BothUpperLower extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_both_upper_lower, container, false);
 
+
+        LowerBack.insertIntoDatabase();
 
 
         createBothUpperLowerExercises();

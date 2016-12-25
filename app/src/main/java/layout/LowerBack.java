@@ -35,35 +35,35 @@ public class LowerBack extends Fragment {
     private static String posturalTitle = "Postural Practice (Awareness)";
     public static String[] titleArray = {gluteAbTitle, quadHoldTitle, psoasStretchTitle, calfStretchTitle, posturalTitle};
 
-    private String gluteAbDescription = "Squeeze your abs and your buttocks and hold for 20 seconds";
-    private String quadHoldDescription = "Stand up, use a desk or wall to maintain your balance, grab your foot, and pull your foot toward your buttocks.";
-    private String psoasStretchDescription = "Stand with a wide stance and stretch the front of your legs.";
-    private String calfStretchDescription = "Stand close to a wall. Push the wall with both hands. ";
-    private String posturalDescription = "Arms Behind the Back Hold";
-    private String[] descriptionArray = {gluteAbDescription, quadHoldDescription, psoasStretchDescription, calfStretchDescription, posturalDescription};
+    private static String gluteAbDescription = "Squeeze your abs and your buttocks and hold for 20 seconds";
+    private static String quadHoldDescription = "Stand up, use a desk or wall to maintain your balance, grab your foot, and pull your foot toward your buttocks.";
+    private static String psoasStretchDescription = "Stand with a wide stance and stretch the front of your legs.";
+    private static String calfStretchDescription = "Stand close to a wall. Push the wall with both hands. ";
+    private static String posturalDescription = "Arms Behind the Back Hold";
+    private static String[] descriptionArray = {gluteAbDescription, quadHoldDescription, psoasStretchDescription, calfStretchDescription, posturalDescription};
 
-    private String gluteAbImageURL = "abcd";
-    private String quadHoldImageURL = "abcd";
-    private String psoasStretchImageURL = "abcd";
-    private String calfStretchImageURL = "abcd";
-    private String posturalImageURL= "abcd";
-    private String [] imageURLArray = {gluteAbImageURL, quadHoldImageURL, psoasStretchImageURL, calfStretchImageURL, posturalImageURL};
+    private static String gluteAbImageURL = "abcd";
+    private static String quadHoldImageURL = "abcd";
+    private static String psoasStretchImageURL = "abcd";
+    private static String calfStretchImageURL = "abcd";
+    private static String posturalImageURL= "abcd";
+    private static String [] imageURLArray = {gluteAbImageURL, quadHoldImageURL, psoasStretchImageURL, calfStretchImageURL, posturalImageURL};
 
-    private String gluteAbVideoURL = "abcd";
-    private String quadHoldVideoURL = "abcd";
-    private String psoasStretchVideoURL = "abcd";
-    private String calfStretchVideoURL = "abcd";
-    private String posturalVideoURL= "abcd";
-    private String [] videoURLArray = {gluteAbImageURL, quadHoldImageURL, psoasStretchImageURL, calfStretchImageURL, posturalImageURL};
+    private static String gluteAbVideoURL = "abcd";
+    private static String quadHoldVideoURL = "abcd";
+    private static String psoasStretchVideoURL = "abcd";
+    private static String calfStretchVideoURL = "abcd";
+    private static String posturalVideoURL= "abcd";
+    private static String [] videoURLArray = {gluteAbImageURL, quadHoldImageURL, psoasStretchImageURL, calfStretchImageURL, posturalImageURL};
 
-    private ImageView gluteAbImage;
-    private ImageView quadHoldImage;
-    private ImageView psoasStretchImage;
-    private ImageView calfStretchImage;
-    private ImageView posturalImage;
-    private ImageView[] imageArray = {gluteAbImage, quadHoldImage, psoasStretchImage, calfStretchImage, posturalImage};
+    private static ImageView gluteAbImage;
+    private static ImageView quadHoldImage;
+    private static ImageView psoasStretchImage;
+    private static ImageView calfStretchImage;
+    private static ImageView posturalImage;
+    private static ImageView[] imageArray = {gluteAbImage, quadHoldImage, psoasStretchImage, calfStretchImage, posturalImage};
 
-    private int [] imageIntsArray = {R.drawable.video_icon_second, R.drawable.video_icon_second, R.drawable.video_icon_second, R.drawable.video_icon_second};
+    private static int [] imageIntsArray = {R.drawable.video_icon_second, R.drawable.video_icon_second, R.drawable.video_icon_second, R.drawable.video_icon_second};
 
     private View view;
     ListView listView;
@@ -101,7 +101,7 @@ public class LowerBack extends Fragment {
 
 
     }
-    public void insertIntoDataBase(){
+    public static void insertIntoDataBase(){
         String sqlCommand; //this String will be overwritten multiple times and represents all of the commands used for creating the table
 
         SQLiteDatabase sqliteDatabase = getActivity().getBaseContext().openOrCreateDatabase("exercises_all", Context.MODE_PRIVATE, null);
@@ -120,7 +120,7 @@ public class LowerBack extends Fragment {
         for (int a = 0; a < exercisesArrayLower.length; a++) {
             imageArray[a] = new ImageView(getContext());
             imageArray[a].setImageResource(R.mipmap.ic_launcher);
-            exercisesArrayLower[a] = new Exercise(titleArray[a], descriptionArray[a], imageArray[a], );
+           // exercisesArrayLower[a] = new Exercise(titleArray[a], descriptionArray[a], imageArray[a], );
             exerciseArrayListLower.add(exercisesArrayLower[a]);
         }
 
