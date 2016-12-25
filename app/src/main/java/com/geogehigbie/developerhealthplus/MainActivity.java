@@ -105,8 +105,8 @@ public class MainActivity extends AppCompatActivity {
         sqlCommand = "DROP TABLE IF EXISTS exercises_all";
         sqLiteDatabase.execSQL(sqlCommand);
 
-        sqlCommand = "CREATE TABLE IF NOT EXISTS exercises_all(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, type TEXT, " +
-                "instructions TEXT, video_link TEXT, image_link TEXT)";
+        sqlCommand = "CREATE TABLE IF NOT EXISTS exercises_all(id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, type TEXT, " +
+                "description TEXT, image_link TEXT, video_link TEXT)";
         sqLiteDatabase.execSQL(sqlCommand);
 
        // sqlCommand = "INSERT INTO TABLE exercises all(1";

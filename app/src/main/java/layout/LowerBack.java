@@ -112,10 +112,10 @@ public class LowerBack extends Fragment {
 
        // MainActivity.sqLiteDatabase //= getActvity().getBaseContext().openOrCreateDatabase("exercises_all", Context.MODE_PRIVATE, null);
 
-        sqlCommand = "INSERT INTO exercises_all (title, description, imageURL, videoURL) VALUES(";
+        sqlCommand = "INSERT INTO exercises_all (title, type, description, image_link, video_link) VALUES(";
         for(int a = 0; a < titleArray.length; a++){
-            MainActivity.sqLiteDatabase.execSQL(sqlCommand + titleArray[a] + descriptionArray[a] +
-                    imageURLArray[a]+ videoURLArray[a] + type +");");
+            MainActivity.sqLiteDatabase.execSQL(sqlCommand + titleArray[a] + type + descriptionArray[a] +
+                    imageURLArray[a]+ videoURLArray[a] + ");");
         }
 
     }
