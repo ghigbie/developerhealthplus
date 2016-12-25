@@ -90,17 +90,17 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void createDatabase(){
-        String sqlCommand; //this String will be overwritten mutiple times and represents all of the commands used for creating the table
+        String sqlCommand; //this String will be overwritten multiple times and represents all of the commands used for creating the table
 
         SQLiteDatabase sqLiteDatabase = getBaseContext().openOrCreateDatabase("exercises_all", MODE_PRIVATE, null);
         sqlCommand = "DROP TABLE IF EXISTS exercises_all";
         sqLiteDatabase.execSQL(sqlCommand);
 
-        sqlCommand = "CREATE TABLE IF NOT EXISTS exercises_all(id INTEGER PRIMARY KEY, name TEXT, type TEXT, " +
+        sqlCommand = "CREATE TABLE IF NOT EXISTS exercises_all(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, type TEXT, " +
                 "instructions TEXT, video_link TEXT, image_link TEXT)";
         sqLiteDatabase.execSQL(sqlCommand);
 
-        sqlCommand = "INSERT INTO TABLE exercises all(1,";
+       // sqlCommand = "INSERT INTO TABLE exercises all(1";
 
     }
 

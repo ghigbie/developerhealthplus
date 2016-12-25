@@ -1,6 +1,7 @@
 package layout;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -41,12 +42,12 @@ public class LowerBack extends Fragment {
     private String posturalDescription = "Arms Behind the Back Hold";
     private String[] descriptionArray = {gluteAbDescription, quadHoldDescription, psoasStretchDescription, calfStretchDescription, posturalDescription};
 
-    String gluteAbImageURL = "abcd";
-    String quadHoldImageURL = "abcd";
-    String psoasStretchImageURL = "abcd";
-    String calfStretchImageURL = "abcd";
-    String posturalImageURL= "abcd";
-    String [] imageURLArray = {gluteAbImageURL, quadHoldImageURL, psoasStretchImageURL, calfStretchImageURL, posturalImageURL};
+    private String gluteAbImageURL = "abcd";
+    private String quadHoldImageURL = "abcd";
+    private String psoasStretchImageURL = "abcd";
+    private String calfStretchImageURL = "abcd";
+    private String posturalImageURL= "abcd";
+    private String [] imageURLArray = {gluteAbImageURL, quadHoldImageURL, psoasStretchImageURL, calfStretchImageURL, posturalImageURL};
 
     private ImageView gluteAbImage;
     private ImageView quadHoldImage;
@@ -91,6 +92,19 @@ public class LowerBack extends Fragment {
 
 
     }
+    public void insertIntoDataBase(){
+        String sqlCommand; //this String will be overwritten multiple times and represents all of the commands used for creating the table
+
+        SQLiteDatabase sqliteDatabase = getActivity().getBaseContext().openOrCreateDatabase("exercises_all", Context.MODE_PRIVATE, null);
+
+        sqlCommand = "INSERT INTO exercises_all (title, description, imageURL, videoURL ";
+        for(int a = 0; a < titleArray.length; a++){
+            sqliteDatabase.execSQL(sqlCommand + titleArray[a]);
+        }
+
+    }
+
+
     //creates the lower back exercises
     public void createLowerBackExercises() {
 

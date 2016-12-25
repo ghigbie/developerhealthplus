@@ -11,13 +11,15 @@ public class Exercise {
     private String Title;
     private String Description;
     private String ImageURL;
+    private String VideoURL;
     private ImageView ExerciseImage;
 
-    public Exercise(String title, String description, String imageURL){ //ImageView exerciseImage){
+    public Exercise(String title, String description, String imageURL, String videoURL){ //ImageView exerciseImage){
 
         Title = title;
         Description = description;
         ImageURL = imageURL;
+        VideoURL = videoURL;
        // ExerciseImage = exerciseImage;
 
     }
@@ -52,5 +54,13 @@ public class Exercise {
 
     public void setImageURL(String imageURL) {
         ImageURL = imageURL;
+    }
+
+    public String getVideoURL() {
+        return VideoURL;
+    }
+
+    public void setVideoURL(String videoURL) {
+        VideoURL = videoURL;
     }
 }
