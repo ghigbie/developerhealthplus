@@ -1,7 +1,6 @@
 package layout;
 
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.geogehigbie.developerhealthplus.Exercise;
+import com.geogehigbie.developerhealthplus.MainActivity;
 import com.geogehigbie.developerhealthplus.R;
 
 import java.util.ArrayList;
@@ -69,6 +69,8 @@ public class LowerBack extends Fragment {
     ListView listView;
     Context context;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -104,11 +106,13 @@ public class LowerBack extends Fragment {
     public static void insertIntoDataBase(){
         String sqlCommand; //this String will be overwritten multiple times and represents all of the commands used for creating the table
 
-        SQLiteDatabase sqliteDatabase = getActivity().getBaseContext().openOrCreateDatabase("exercises_all", Context.MODE_PRIVATE, null);
+       // SQLiteDatabase sqLiteDatabase = MainActivity.sqLiteDatabase;
+
+       // MainActivity.sqLiteDatabase //= getActvity().getBaseContext().openOrCreateDatabase("exercises_all", Context.MODE_PRIVATE, null);
 
         sqlCommand = "INSERT INTO exercises_all (title, description, imageURL, videoURL) VALUES(";
         for(int a = 0; a < titleArray.length; a++){
-            sqliteDatabase.execSQL(sqlCommand + titleArray[a] + descriptionArray[a] + imageURLArray[a]+ videoURLArray + ");");
+            MainActivity.sqLiteDatabase.execSQL(sqlCommand + titleArray[a] + descriptionArray[a] + imageURLArray[a]+ videoURLArray + ");");
         }
 
     }

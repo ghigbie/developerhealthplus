@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
 
+    public static SQLiteDatabase sqLiteDatabase;
+
 
 
 
@@ -99,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
     public void createDatabase(){
         String sqlCommand; //this String will be overwritten multiple times and represents all of the commands used for creating the table
 
-        SQLiteDatabase sqLiteDatabase = getBaseContext().openOrCreateDatabase("exercises_all", MODE_PRIVATE, null);
+        sqLiteDatabase = getBaseContext().openOrCreateDatabase("exercises_all", MODE_PRIVATE, null);
         sqlCommand = "DROP TABLE IF EXISTS exercises_all";
         sqLiteDatabase.execSQL(sqlCommand);
 

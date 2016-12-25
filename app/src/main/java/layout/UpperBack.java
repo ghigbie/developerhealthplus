@@ -1,7 +1,5 @@
 package layout;
 
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.geogehigbie.developerhealthplus.Exercise;
+import com.geogehigbie.developerhealthplus.MainActivity;
 import com.geogehigbie.developerhealthplus.R;
 
 import java.util.ArrayList;
@@ -29,40 +28,40 @@ public class UpperBack extends Fragment {
 
     public static List<Exercise> exerciseArrayListUpper = new ArrayList<Exercise>();
 
-    private String chinTitle = "Chin Tucks";
-    private String shoulderTitle = "Shoulder Shrug Holds Push Back";
-    private String doorStrecthTitle = "Doorway Stretch";
-    private String neckStretchTitle = "Neck Stretch Holds";
-    private String armsBehindTitle = "Arms Behind the Back Hold";
-    private String[] titleArray = {chinTitle, shoulderTitle, doorStrecthTitle, neckStretchTitle, armsBehindTitle};
+    private static String chinTitle = "Chin Tucks";
+    private static String shoulderTitle = "Shoulder Shrug Holds Push Back";
+    private static String doorStrecthTitle = "Doorway Stretch";
+    private static String neckStretchTitle = "Neck Stretch Holds";
+    private static String armsBehindTitle = "Arms Behind the Back Hold";
+    private static String[] titleArray = {chinTitle, shoulderTitle, doorStrecthTitle, neckStretchTitle, armsBehindTitle};
 
-    private String chinDescription = "Raise the back of your head as if you were sliding it up a wall.";
-    private String shoulderDescription = "Raise your shoulders up toward your ears,then move them back, and then move them down.";
-    private String doorStretchDescription = "Hold your arms in a doorway, stretch one of your arms at a time. Do this comfortably.";
-    private String neckStretchDescription = "Sit on your left hand and then use your tilt your head by leaning your right ear to your right shoulder. Repeat for you right side";
-    private String armsBehindDescription = "Clasp your hands behind your back and hold.";
-    private String[] descriptionArray = {chinDescription, shoulderDescription, doorStretchDescription, neckStretchDescription, armsBehindDescription};
+    private static String chinDescription = "Raise the back of your head as if you were sliding it up a wall.";
+    private static String shoulderDescription = "Raise your shoulders up toward your ears,then move them back, and then move them down.";
+    private static String doorStretchDescription = "Hold your arms in a doorway, stretch one of your arms at a time. Do this comfortably.";
+    private static String neckStretchDescription = "Sit on your left hand and then use your tilt your head by leaning your right ear to your right shoulder. Repeat for you right side";
+    private static String armsBehindDescription = "Clasp your hands behind your back and hold.";
+    private static String[] descriptionArray = {chinDescription, shoulderDescription, doorStretchDescription, neckStretchDescription, armsBehindDescription};
 
-    private String chinImageURL = "abcd";
-    private String shoulderImageURL = "abcd";
-    private String doorStrecthImageURL = "abcd";
-    private String neckStretchImageURL = "abcd";
-    private String armsBehindImageURL = "abcd";
-    private String[] imageURLArray = {chinImageURL, shoulderImageURL, doorStrecthImageURL, neckStretchImageURL, armsBehindImageURL};
+    private static String chinImageURL = "abcd";
+    private static String shoulderImageURL = "abcd";
+    private static String doorStrecthImageURL = "abcd";
+    private static String neckStretchImageURL = "abcd";
+    private static String armsBehindImageURL = "abcd";
+    private static String[] imageURLArray = {chinImageURL, shoulderImageURL, doorStrecthImageURL, neckStretchImageURL, armsBehindImageURL};
 
-    private String chinVideoURL = "abcd";
-    private String shoulderVideoURL = "abcd";
-    private String doorStrecthVideoURL = "abcd";
-    private String neckStretchVideoURL = "abcd";
-    private String armsBehindVideoURL = "abcd";
-    private String[] videoURLArray = {chinVideoURL, shoulderVideoURL, doorStrecthVideoURL, neckStretchVideoURL, armsBehindVideoURL};
+    private static String chinVideoURL = "abcd";
+    private static String shoulderVideoURL = "abcd";
+    private static String doorStrecthVideoURL = "abcd";
+    private static String neckStretchVideoURL = "abcd";
+    private static String armsBehindVideoURL = "abcd";
+    private static String[] videoURLArray = {chinVideoURL, shoulderVideoURL, doorStrecthVideoURL, neckStretchVideoURL, armsBehindVideoURL};
 
-    private ImageView chinImage;
-    private ImageView shoulderImage;
-    private ImageView doorStrechImage;
-    private ImageView neckStrechImage;
-    private ImageView armsBehindImage;
-    private ImageView[] imageArray = {chinImage, shoulderImage, doorStrechImage, neckStrechImage, armsBehindImage};
+    private static ImageView chinImage;
+    private static ImageView shoulderImage;
+    private static ImageView doorStrechImage;
+    private static ImageView neckStrechImage;
+    private static ImageView armsBehindImage;
+    private static ImageView[] imageArray = {chinImage, shoulderImage, doorStrechImage, neckStrechImage, armsBehindImage};
 
     private View view;
 
@@ -87,14 +86,14 @@ public class UpperBack extends Fragment {
     }
 
 
-    public void insertIntoDataBase(){
+    public static void insertIntoDataBase(){
         String sqlCommand; //this String will be overwritten multiple times and represents all of the commands used for creating the table
 
-        SQLiteDatabase sqliteDatabase = getActivity().getBaseContext().openOrCreateDatabase("exercises_all", Context.MODE_PRIVATE, null);
+       // SQLiteDatabase sqliteDatabase = getActivity().getBaseContext().openOrCreateDatabase("exercises_all", Context.MODE_PRIVATE, null);
 
         sqlCommand = "INSERT INTO exercises_all (title, description, imageURL, videoURL) VALUES(";
         for(int a = 0; a < titleArray.length; a++){
-            sqliteDatabase.execSQL(sqlCommand + titleArray[a] + descriptionArray[a] + imageURLArray[a]+ videoURLArray + ");");
+            MainActivity.sqLiteDatabase.execSQL(sqlCommand + titleArray[a] + descriptionArray[a] + imageURLArray[a]+ videoURLArray + ");");
         }
 
     }

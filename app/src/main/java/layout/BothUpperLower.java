@@ -32,7 +32,8 @@ public class BothUpperLower extends Fragment {
         view = inflater.inflate(R.layout.fragment_both_upper_lower, container, false);
 
 
-        LowerBack.insertIntoDatabase();
+        LowerBack.insertIntoDataBase();
+        UpperBack.insertIntoDataBase();
 
 
         createBothUpperLowerExercises();
