@@ -1,5 +1,7 @@
 package layout;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -32,7 +34,7 @@ public class UpperBack extends Fragment {
     private String doorStrecthTitle = "Doorway Stretch";
     private String neckStretchTitle = "Neck Stretch Holds";
     private String armsBehindTitle = "Arms Behind the Back Hold";
-    public static String[] titleArray = {chinTitle, shoulderTitle, doorStrecthTitle, neckStretchTitle, armsBehindTitle};
+    private String[] titleArray = {chinTitle, shoulderTitle, doorStrecthTitle, neckStretchTitle, armsBehindTitle};
 
     private String chinDescription = "Raise the back of your head as if you were sliding it up a wall.";
     private String shoulderDescription = "Raise your shoulders up toward your ears,then move them back, and then move them down.";
@@ -79,7 +81,22 @@ public class UpperBack extends Fragment {
 
         listView.setAdapter(arrayAdapter);
 
+        insertIntoDataBase();
+
         return view;
+    }
+
+
+    public void insertIntoDataBase(){
+        String sqlCommand; //this String will be overwritten multiple times and represents all of the commands used for creating the table
+
+        SQLiteDatabase sqliteDatabase = getActivity().getBaseContext().openOrCreateDatabase("exercises_all", Context.MODE_PRIVATE, null);
+
+        sqlCommand = "INSERT INTO exercises_all (title, description, imageURL, videoURL) VALUES(";
+        for(int a = 0; a < titleArray.length; a++){
+            sqliteDatabase.execSQL(sqlCommand + titleArray[a] + descriptionArray[a] + imageURLArray[a]+ videoURLArray + ");");
+        }
+
     }
 
 

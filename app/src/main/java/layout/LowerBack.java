@@ -94,6 +94,8 @@ public class LowerBack extends Fragment {
 
         listView.setAdapter(arrayAdapter);
 
+        insertIntoDataBase();
+
         return view;
 
 
