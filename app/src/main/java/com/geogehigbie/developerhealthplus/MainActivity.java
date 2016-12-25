@@ -32,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
         setOnClickMethod(); //sets the button's onClick Listener
 
-        createExercises();
+        //createExercises();
+
+        createDatabase();
     }
 
 
@@ -93,15 +95,13 @@ public class MainActivity extends AppCompatActivity {
 
         int [] imageIntsArray = {R.drawable.video_icon_second, R.drawable.video_icon_second, R.drawable.video_icon_second, R.drawable.video_icon_second};
 
-
-
     }
 
 
     public void createDatabase(){
         String sqlCommand; //this String will be overwritten multiple times and represents all of the commands used for creating the table
 
-        sqLiteDatabase = getBaseContext().openOrCreateDatabase("exercises_all", MODE_PRIVATE, null);
+        sqLiteDatabase = getBaseContext().openOrCreateDatabase("sqlite-db", MODE_PRIVATE, null);
         sqlCommand = "DROP TABLE IF EXISTS exercises_all";
         sqLiteDatabase.execSQL(sqlCommand);
 
