@@ -41,6 +41,13 @@ public class LowerBack extends Fragment {
     private String posturalDescription = "Arms Behind the Back Hold";
     private String[] descriptionArray = {gluteAbDescription, quadHoldDescription, psoasStretchDescription, calfStretchDescription, posturalDescription};
 
+    String gluteAbImageURL = "abcd";
+    String quadHoldImageURL = "abcd";
+    String psoasStretchImageURL = "abcd";
+    String calfStretchImageURL = "abcd";
+    String posturalImageURL= "abcd";
+    String [] imageURLArray = {gluteAbImageURL, quadHoldImageURL, psoasStretchImageURL, calfStretchImageURL, posturalImageURL};
+
     private ImageView gluteAbImage;
     private ImageView quadHoldImage;
     private ImageView psoasStretchImage;
