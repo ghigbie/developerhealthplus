@@ -56,6 +56,8 @@ public class LowerBack extends Fragment {
     private static String posturalVideoURL= "abcd";
     private static String [] videoURLArray = {gluteAbImageURL, quadHoldImageURL, psoasStretchImageURL, calfStretchImageURL, posturalImageURL};
 
+    private static String type = "lower";
+
     private static ImageView gluteAbImage;
     private static ImageView quadHoldImage;
     private static ImageView psoasStretchImage;
@@ -112,7 +114,8 @@ public class LowerBack extends Fragment {
 
         sqlCommand = "INSERT INTO exercises_all (title, description, imageURL, videoURL) VALUES(";
         for(int a = 0; a < titleArray.length; a++){
-            MainActivity.sqLiteDatabase.execSQL(sqlCommand + titleArray[a] + descriptionArray[a] + imageURLArray[a]+ videoURLArray + ");");
+            MainActivity.sqLiteDatabase.execSQL(sqlCommand + titleArray[a] + descriptionArray[a] +
+                    imageURLArray[a]+ videoURLArray[a] + type +");");
         }
 
     }

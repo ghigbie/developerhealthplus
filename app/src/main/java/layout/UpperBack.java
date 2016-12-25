@@ -56,6 +56,8 @@ public class UpperBack extends Fragment {
     private static String armsBehindVideoURL = "abcd";
     private static String[] videoURLArray = {chinVideoURL, shoulderVideoURL, doorStrecthVideoURL, neckStretchVideoURL, armsBehindVideoURL};
 
+    private static String type = "lower";
+
     private static ImageView chinImage;
     private static ImageView shoulderImage;
     private static ImageView doorStrechImage;
@@ -93,7 +95,8 @@ public class UpperBack extends Fragment {
 
         sqlCommand = "INSERT INTO exercises_all (title, description, imageURL, videoURL) VALUES(";
         for(int a = 0; a < titleArray.length; a++){
-            MainActivity.sqLiteDatabase.execSQL(sqlCommand + titleArray[a] + descriptionArray[a] + imageURLArray[a]+ videoURLArray + ");");
+            MainActivity.sqLiteDatabase.execSQL(sqlCommand + titleArray[a] + descriptionArray[a]
+                    + imageURLArray[a]+ videoURLArray[a] + type + ");");
         }
 
     }

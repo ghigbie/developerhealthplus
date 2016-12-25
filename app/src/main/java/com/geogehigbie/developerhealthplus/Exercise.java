@@ -12,14 +12,16 @@ public class Exercise {
     private String Description;
     private String ImageURL;
     private String VideoURL;
+    private String Type;
     private ImageView ExerciseImage;
 
-    public Exercise(String title, String description, String imageURL, String videoURL){ //ImageView exerciseImage){
+    public Exercise(String title, String description, String imageURL, String videoURL, String type){ //ImageView exerciseImage){
 
         Title = title;
         Description = description;
         ImageURL = imageURL;
         VideoURL = videoURL;
+        Type = type;
        // ExerciseImage = exerciseImage;
 
     }
