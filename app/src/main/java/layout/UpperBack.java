@@ -35,6 +35,8 @@ public class UpperBack extends Fragment {
     private static String armsBehindTitle = "Arms Behind the Back Hold";
     private static String[] titleArray = {chinTitle, shoulderTitle, doorStrecthTitle, neckStretchTitle, armsBehindTitle};
 
+    private static String type = "upper";
+
     private static String chinDescription = "Raise the back of your head as if you were sliding it up a wall.";
     private static String shoulderDescription = "Raise your shoulders up toward your ears,then move them back, and then move them down.";
     private static String doorStretchDescription = "Hold your arms in a doorway, stretch one of your arms at a time. Do this comfortably.";
@@ -55,8 +57,6 @@ public class UpperBack extends Fragment {
     private static String neckStretchVideoURL = "abcd";
     private static String armsBehindVideoURL = "abcd";
     private static String[] videoURLArray = {chinVideoURL, shoulderVideoURL, doorStrecthVideoURL, neckStretchVideoURL, armsBehindVideoURL};
-
-    private static String type = "lower";
 
     private static ImageView chinImage;
     private static ImageView shoulderImage;

@@ -33,7 +33,9 @@ public class LowerBack extends Fragment {
     private static String psoasStretchTitle = "PsoasStretch";
     private static String calfStretchTitle = "Calf Stretch Holds";
     private static String posturalTitle = "Postural Practice (Awareness)";
-    public static String[] titleArray = {gluteAbTitle, quadHoldTitle, psoasStretchTitle, calfStretchTitle, posturalTitle};
+    private static String[] titleArray = {gluteAbTitle, quadHoldTitle, psoasStretchTitle, calfStretchTitle, posturalTitle};
+
+    private static String type = "lower";
 
     private static String gluteAbDescription = "Squeeze your abs and your buttocks and hold for 20 seconds";
     private static String quadHoldDescription = "Stand up, use a desk or wall to maintain your balance, grab your foot, and pull your foot toward your buttocks.";
@@ -55,8 +57,6 @@ public class LowerBack extends Fragment {
     private static String calfStretchVideoURL = "abcd";
     private static String posturalVideoURL= "abcd";
     private static String [] videoURLArray = {gluteAbImageURL, quadHoldImageURL, psoasStretchImageURL, calfStretchImageURL, posturalImageURL};
-
-    private static String type = "lower";
 
     private static ImageView gluteAbImage;
     private static ImageView quadHoldImage;

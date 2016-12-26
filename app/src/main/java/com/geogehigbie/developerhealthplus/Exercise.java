@@ -9,19 +9,20 @@ import android.widget.ImageView;
 public class Exercise {
 
     private String Title;
+    private String Type;
     private String Description;
     private String ImageURL;
     private String VideoURL;
-    private String Type;
     private ImageView ExerciseImage;
 
-    public Exercise(String title, String description, String imageURL, String videoURL, String type){ //ImageView exerciseImage){
+    public Exercise(String title, String type, String description, String imageURL, String videoURL){ //ImageView exerciseImage){
 
-        Title = title;
-        Description = description;
-        ImageURL = imageURL;
-        VideoURL = videoURL;
-        Type = type;
+        this.Title = title;
+        this.Type = type;
+        this.Description = description;
+        this.ImageURL = imageURL;
+        this.VideoURL = videoURL;
+        this.Type = type;
        // ExerciseImage = exerciseImage;
 
     }

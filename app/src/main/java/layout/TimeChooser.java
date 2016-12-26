@@ -112,7 +112,6 @@ public class TimeChooser extends Fragment {
         editor.putInt("notificationTime", notificationTime);
         editor.commit();
 
-        //createDataBase();  //don't call this method until you have it squared away
 
         //how often do you want to be notified?
 
