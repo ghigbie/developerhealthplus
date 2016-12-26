@@ -85,7 +85,7 @@ public class UpperBack extends Fragment {
 
         listView.setAdapter(new CustomListAdapter(getActivity().getApplicationContext(), titleArray, imageIntsArray));
 
-        insertIntoDataBase();
+       // insertIntoDataBase();
 
         return view;
     }

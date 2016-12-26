@@ -47,7 +47,11 @@ public class CustomListAdapter extends ArrayAdapter<String> {
         View rowView = inflater.inflate(R.layout.row_layout_for_use, parent, false);
         TextView textView = (TextView) rowView.findViewById(R.id.row_text_view);
         textView.setText(values[position]);
+
+
         Drawable draw = context.getResources().getDrawable(icons[position]);
+
+
         Bitmap bitmap = ((BitmapDrawable) draw).getBitmap();
         int h = bitmap.getHeight();
         int w = bitmap.getWidth();

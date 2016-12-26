@@ -101,7 +101,7 @@ public class LowerBack extends Fragment {
 
         //setListAdapter(new CustomListAdapter(this, data, icons));
 
-        insertIntoDataBase();
+       // insertIntoDataBase();
 
         return view;
 
