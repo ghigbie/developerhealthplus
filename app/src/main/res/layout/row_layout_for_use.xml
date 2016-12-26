@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    android:maxLines="1">
+    android:maxLines="1"
+    android:background="@color/backgroundColor">
 
 
     <ImageView
@@ -12,6 +13,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/video_icon_second"
+        android:background="@color/backgroundColor"
         />
 
     <TextView
@@ -19,10 +21,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/exercise_title"
+        android:textColor="@color/textColor"
         android:paddingLeft="15dp"
         android:layout_gravity="center_vertical"
         android:textAppearance="?android:textAppearanceLarge"
         android:textStyle="bold"
+        android:background="@color/backgroundColor"
         />
 
 </LinearLayout>
