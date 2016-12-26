@@ -52,7 +52,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
         for (int a = 0; a < exercisesArrayLower.length; a++) {
             imageArray[a].setImageResource(R.mipmap.ic_launcher);
-            exercisesArrayLower[a] = new Exercise(titleArray[a], descriptionArray[a], imageArray[a]);
+            //exercisesArrayLower[a] = new Exercise(titleArray[a], descriptionArray[a], imageArray[a]);
             exerciseArrayListLower.add(exercisesArrayLower[a]);
         }
 

@@ -61,6 +61,9 @@ public class CustomListAdapter extends ArrayAdapter<String> {
 		 */
         textView.setCompoundDrawablesWithIntrinsicBounds(newDraw, null, null,
                 null);
+
         return rowView;
     }
+
+
 }

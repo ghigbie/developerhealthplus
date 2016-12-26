@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.geogehigbie.developerhealthplus.CustomListAdapter;
 import com.geogehigbie.developerhealthplus.Exercise;
 import com.geogehigbie.developerhealthplus.MainActivity;
 import com.geogehigbie.developerhealthplus.R;
@@ -96,7 +97,9 @@ public class LowerBack extends Fragment {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, titleArray);
 
-        listView.setAdapter(arrayAdapter);
+        listView.setAdapter(new CustomListAdapter(getActivity().getApplicationContext(), titleArray, imageIntsArray));
+
+        //setListAdapter(new CustomListAdapter(this, data, icons));
 
         insertIntoDataBase();
 
@@ -135,8 +138,9 @@ public class LowerBack extends Fragment {
 
     public void createCardViews(){
 
-
     }
+
+
 
     public String[] getTitleArray() {
         return titleArray;

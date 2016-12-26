@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.geogehigbie.developerhealthplus.CustomListAdapter;
 import com.geogehigbie.developerhealthplus.Exercise;
 import com.geogehigbie.developerhealthplus.MainActivity;
 import com.geogehigbie.developerhealthplus.R;
@@ -65,6 +66,8 @@ public class UpperBack extends Fragment {
     private static ImageView armsBehindImage;
     private static ImageView[] imageArray = {chinImage, shoulderImage, doorStrechImage, neckStrechImage, armsBehindImage};
 
+    private static int [] imageIntsArray = {R.drawable.video_icon_second, R.drawable.video_icon_second, R.drawable.video_icon_second, R.drawable.video_icon_second};
+
     private View view;
 
 
@@ -80,7 +83,7 @@ public class UpperBack extends Fragment {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, titleArray);
 
-        listView.setAdapter(arrayAdapter);
+        listView.setAdapter(new CustomListAdapter(getActivity().getApplicationContext(), titleArray, imageIntsArray));
 
         insertIntoDataBase();
 
