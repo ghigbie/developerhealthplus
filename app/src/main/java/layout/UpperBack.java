@@ -5,8 +5,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.geogehigbie.developerhealthplus.CustomListAdapter;
@@ -80,10 +80,12 @@ public class UpperBack extends Fragment {
 
         ListView listView = (ListView) view.findViewById(R.id.list_view_upper);
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, titleArray);
+//        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+//                getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, titleArray);
 
-        listView.setAdapter(new CustomListAdapter(getActivity().getApplicationContext(), titleArray, imageIntsArray));
+        ListAdapter listAdapter = new CustomListAdapter(getActivity().getApplicationContext(), titleArray);
+
+        listView.setAdapter(listAdapter);
 
        // insertIntoDataBase();
 

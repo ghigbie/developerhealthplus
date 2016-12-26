@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.geogehigbie.developerhealthplus.CustomListAdapter;
@@ -31,7 +32,7 @@ public class LowerBack extends Fragment {
 
     private static String gluteAbTitle = "Glute Ab Contraction";
     private static String quadHoldTitle = "Quad Hold Stretch";
-    private static String psoasStretchTitle = "PsoasStretch";
+    private static String psoasStretchTitle = "Psoas Stretch";
     private static String calfStretchTitle = "Calf Stretch Holds";
     private static String posturalTitle = "Postural Practice (Awareness)";
     private static String[] titleArray = {gluteAbTitle, quadHoldTitle, psoasStretchTitle, calfStretchTitle, posturalTitle};
@@ -97,8 +98,9 @@ public class LowerBack extends Fragment {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, titleArray);
 
-        listView.setAdapter(new CustomListAdapter(getActivity().getApplicationContext(), titleArray, imageIntsArray));
+        ListAdapter listAdapter = new CustomListAdapter(getActivity().getApplicationContext(), titleArray);
 
+        listView.setAdapter(listAdapter);
         //setListAdapter(new CustomListAdapter(this, data, icons));
 
        // insertIntoDataBase();
