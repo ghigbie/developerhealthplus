@@ -110,6 +110,8 @@ public class LowerBack extends Fragment {
 
 
     }
+
+    //method to create database
     public static void insertIntoDataBase(){
         String sqlCommand; //this String will be overwritten multiple times and represents all of the commands used for creating the table
 
