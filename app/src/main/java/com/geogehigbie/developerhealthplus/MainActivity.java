@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    //creates a database
     public void createDatabase(){
         String sqlCommand; //this String will be overwritten multiple times and represents all of the commands used for creating the table
 
