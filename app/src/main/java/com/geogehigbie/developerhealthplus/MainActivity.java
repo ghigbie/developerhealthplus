@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     public void createExercises(){
         String gluteAbTitle = "Glute Ab Contraction";
         String quadHoldTitle = "Quad Hold Stretch";
-        String psoasStretchTitle = "PsoasStretch";
+        String psoasStretchTitle = "Psoas Stretch";
         String calfStretchTitle = "Calf Stretch Holds";
         String posturalTitle = "Postural Practice (Awareness)";
         String[] titleArray = {gluteAbTitle, quadHoldTitle, psoasStretchTitle, calfStretchTitle, posturalTitle};
