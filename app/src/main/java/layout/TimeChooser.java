@@ -71,7 +71,8 @@ public class TimeChooser extends Fragment {
         return view;
 
     }
-    //need to add a screen with the day preferences
+    //need to add a screen with the day preferences and work times
+    //need to get timezones and specify
 
 
 
