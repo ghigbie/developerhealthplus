@@ -17,8 +17,10 @@ import android.widget.Spinner;
 import com.geogehigbie.developerhealthplus.R;
 
 import java.util.ArrayList;
+import java.util.function.ToDoubleBiFunction;
 
 import static android.content.Context.MODE_PRIVATE;
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 
 public class TimeChooser extends Fragment {
@@ -69,6 +71,10 @@ public class TimeChooser extends Fragment {
         return view;
 
     }
+    //need to add a screen with the day preferences
+
+
+
 
     public void setSpinnerContent(){
 
