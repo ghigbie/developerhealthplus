@@ -41,18 +41,18 @@
 
 
         <Button
-            android:id="@+id/time_selected_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/set_time"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:textStyle="bold"
-            android:textColor="@color/textColor"
-            android:background="@drawable/button_rounded"
-            android:padding="@dimen/title_margin"
-            android:onClick="onClickTimeSelectionSet"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="@dimen/title_margin"/>
+        android:id="@+id/time_selected_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_time"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"
+        android:background="@drawable/button_rounded"
+        android:padding="@dimen/title_margin"
+        android:onClick="onClickTimeSelectionSet"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/title_margin"/>
 
 
     </LinearLayout>

@@ -8,5 +8,4 @@
     android:gravity="left"
     android:textColor="@color/textColor"
     android:padding="@dimen/title_margin"
-    android:background="@color/cardview_dark_background"
     />
